@@ -3,7 +3,7 @@ services:
   - docker
 
 script:
-  - docker run leslieturis/rbp-docker-test npm run test -- --coveralls
+  - docker run -e CI=true leslieturis/rbp-docker-test npm run test -- --coveralls
 
 before_install:
 	- docker build -t leslieturis/rbp-docker-test -f Dockerfile.dev .
