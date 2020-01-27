@@ -1,17 +1,7 @@
 sudo: required
 services:
   - docker
-
 script:
   - docker run -e CI=true leslieturis/rbp-docker-test npm run test -- --coveralls
-
 before_install:
-	- docker build -t leslieturis/rbp-docker-test -f Dockerfile.dev .
-
-notifications:
-  email:
-    on_failure: change
-
-cache:
-  directories:
-    - node_modules
+  - docker build -t leslieturis/rbp-docker-test -f Dockerfile.dev .
