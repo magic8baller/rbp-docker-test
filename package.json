@@ -1,16 +1,16 @@
 {
-  "name": "react-boilerplate",
-  "version": "4.0.0",
-  "description": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
+  "name": "rbp-docker-test",
+  "version": "1.0.0",
+  "description": "testing docker with react-boilerplate",
   "repository": {
     "type": "git",
-    "url": "git://github.com/react-boilerplate/react-boilerplate.git"
+    "url": "git://github.com/magic8baller/rbp-docker-test.git"
   },
   "engines": {
     "npm": ">=5",
     "node": ">=8.15.1"
   },
-  "author": "Max Stoiber",
+  "author": "Leslie Turis",
   "license": "MIT",
   "scripts": {
     "analyze:clean": "rimraf stats.json",
@@ -27,7 +27,6 @@
     "start:production": "npm run test && npm run build && npm run start:prod",
     "start:prod": "cross-env NODE_ENV=production node server",
     "presetup": "npm i chalk shelljs",
-    "setup": "node ./internals/scripts/setup.js",
     "clean": "shjs ./internals/scripts/clean.js",
     "clean:all": "npm run analyze:clean && npm run test:clean && npm run build:clean",
     "generate": "plop --plopfile internals/generators/index.js",
@@ -64,6 +63,7 @@
     "babel-core": "7.0.0-bridge.0"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "@babel/polyfill": "7.4.3",
     "chalk": "^2.4.2",
     "compression": "1.7.4",
